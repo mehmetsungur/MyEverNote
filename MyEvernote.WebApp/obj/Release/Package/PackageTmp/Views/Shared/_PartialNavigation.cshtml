@@ -1,0 +1,74 @@
+﻿@using MyEvernote.WebApp.Models
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/Home/Index">My Evernote</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                @if (CurrentSession.User != null)
+                {
+                    <li class="dropdown">
+                        <a href="/Note/MyNotes" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-wrench"></span> Manager <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Bootstrap.MenuLink("/Note/Create", "plus", " Not Ekle")</li>
+
+                            <li role="separator" class="divider"></li>
+                            <li>@Bootstrap.MenuLink("/Note/Index", "th-list", " Notlarım")</li>
+                            <li>@Bootstrap.MenuLink("/Note/MyLikedNotes", "heart", " Beğendiklerim")</li>
+
+                            @if (CurrentSession.User.IsAdmin)
+                            {
+                                <li role="separator" class="divider"></li>
+                                <li>@Bootstrap.MenuLink("/Category/Create", "plus", " Kategori Ekle")</li>
+                                <li>@Bootstrap.MenuLink("/Category/Index", "th-list", " Kategoriler")</li>
+
+                                <li role="separator" class="divider"></li>
+                                <li>@Bootstrap.MenuLink("/EvernoteUser/Create", "plus", " Kullanıcı Ekle")</li>
+                                <li>@Bootstrap.MenuLink("/EvernoteUser/Index", "th-list", " Kullanıcılar")</li>
+                            }
+                        </ul>
+                    </li>
+                }
+                <li>@Bootstrap.MenuLink("/Home/MostLiked", "star", " Most Liked")</li>
+                <li>@Bootstrap.MenuLink("/Home/Index", "th-list", " Last Notes")</li>
+                <li>@Bootstrap.MenuLink("/Home/About", "info-sign", " About Us")</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if (CurrentSession.User == null)
+                {
+                    <li><a href="/Home/LogIn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="/Home/Register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                }
+                else
+                {
+                    <li class="dropdown">
+                        <a href="/Note/MyNotes" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user"></span> @CurrentSession.User.UserName <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Home/ShowProfile"><span class="glyphicon glyphicon-user"></span> Profili Göster</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/Home/EditProfile"><span class="glyphicon glyphicon-edit"></span> Profili Düzenle</a></li>
+                            <li>
+                                <a href="/Home/DeleteProfile" onclick="return confirm('Hesabınızı silmek istediğinizden emin misiniz?');">
+                                    <span class="glyphicon glyphicon-trash"></span> Profili Sil
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/Home/LogOut"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

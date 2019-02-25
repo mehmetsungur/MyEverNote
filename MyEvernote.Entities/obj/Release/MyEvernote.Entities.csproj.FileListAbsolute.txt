@@ -1,0 +1,8 @@
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\bin\Release\MyEvernote.Entities.dll
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\bin\Release\MyEvernote.Entities.pdb
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\bin\Release\FakeData.dll
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\bin\Release\FakeData.pdb
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\obj\Release\MyEvernote.Entities.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\obj\Release\MyEvernote.Entities.csproj.CopyComplete
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\obj\Release\MyEvernote.Entities.dll
+C:\Users\PC\Desktop\MyEvernoteSolution\MyEvernote.Entities\obj\Release\MyEvernote.Entities.pdb

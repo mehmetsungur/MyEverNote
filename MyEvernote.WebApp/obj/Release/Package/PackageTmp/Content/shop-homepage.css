@@ -1,0 +1,68 @@
+body {
+    padding-top: 70px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 175px;
+    overflow: hidden;
+}
+
+    .caption h4 {
+        white-space: nowrap;
+    }
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+    .ratings button {
+        color: #d17581;
+    }
+
+        .ratings button:hover {
+            color: #ac5460;
+        }
+
+.thumbnail {
+    padding: 0;
+    height: 360px;
+}
+
+    .thumbnail img {
+        width: 100%;
+    }
+
+    .thumbnail .caption-full {
+        padding: 9px;
+        color: #333;
+    }
+
+footer {
+    margin: 50px 0;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    line-height: normal;
+    word-spacing: 0px;
+}
